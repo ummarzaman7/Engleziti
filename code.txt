@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EduPortal - Teacher Dashboard & CBT Portal</title>
+  <title>Engleziti - Grade 9 English Platform</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
@@ -16,8 +16,8 @@
   <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center space-x-3">
-        <i class="fa-solid me-2 fa-graduation-cap text-2xl text-yellow-300"></i>
-        <h1 class="text-xl font-bold tracking-wide">EduPortal <span class="text-xs bg-indigo-900 text-indigo-200 px-2 py-0.5 rounded-full font-normal">Grade 9 English Edition</span></h1>
+        <i class="fa-solid fa-graduation-cap text-2xl text-yellow-300"></i>
+        <h1 class="text-xl font-bold tracking-wide">Engleziti <span class="text-xs bg-indigo-900 text-indigo-200 px-2 py-0.5 rounded-full font-normal">Grade 9 English Platform</span></h1>
       </div>
       <div class="flex space-x-2">
         <button id="viewTeacherBtn" onclick="switchView('teacher')" class="px-4 py-2 text-sm font-semibold rounded-lg bg-white text-indigo-700 shadow">Teacher Portal</button>
@@ -37,7 +37,7 @@
           <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
             <i class="fa-solid fa-layer-group text-indigo-600"></i> Active Class Sections
           </h2>
-          <p class="text-xs text-slate-500">Manage, add, or delete your teaching sections at any time.</p>
+          <p class="text-xs text-slate-500">Manage, add, or delete your teaching sections at any time in Engleziti.</p>
         </div>
 
         <div class="flex items-center gap-3">
@@ -56,14 +56,14 @@
       <!-- Main Teacher Workspace Tabs -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-        <!-- Left Column: Lesson Planner & Curriculum Vault -->
+        <!-- Left Column: Lesson Planner & CBT Exam Creator -->
         <div class="lg:col-span-2 space-y-6">
 
           <!-- Lesson Planner Component -->
           <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
             <div class="flex justify-between items-center mb-4">
               <h3 class="text-md font-bold text-slate-800 flex items-center gap-2">
-                <i class="fa-solid fa-book-open text-indigo-600"></i> AI 5E Lesson Plan Generator
+                <i class="fa-solid fa-book-open text-indigo-600"></i> Engleziti 5E Lesson Plan Generator
               </h3>
               <span class="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-md border border-indigo-100 font-medium">Auto-Aligned to Curriculum</span>
             </div>
@@ -114,7 +114,7 @@
                 </select>
               </div>
               <button onclick="publishExam()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-lg text-sm shadow transition flex justify-center items-center gap-2">
-                <i class="fa-solid fa-paper-plane"></i> Publish Exam to Student Portal
+                <i class="fa-solid fa-paper-plane"></i> Publish Exam to Engleziti Portal
               </button>
             </div>
           </div>
@@ -160,8 +160,8 @@
       <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
         <div class="flex justify-between items-center border-b pb-4 mb-4">
           <div>
-            <h2 class="text-lg font-bold text-slate-800">Student CBT Assessment Portal</h2>
-            <p class="text-xs text-slate-500">Select your section and enter your details to begin your exam.</p>
+            <h2 class="text-lg font-bold text-slate-800">Engleziti Student Exam Portal</h2>
+            <p class="text-xs text-slate-500">Select your class section and enter your details to begin your assessment.</p>
           </div>
           <span class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-semibold flex items-center gap-1">
             <i class="fa-regular fa-clock"></i> Timed Test Session
@@ -209,7 +209,7 @@
           </div>
 
           <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg text-sm shadow transition">
-            Submit Test for Auto-Grading
+            Submit Test to Engleziti
           </button>
         </form>
       </div>
@@ -231,7 +231,6 @@
   </div>
 
   <script>
-    // State management
     let classSections = ["Grade 9 - Section A", "Grade 9 - Section B", "Grade 9 - Honors"];
 
     function renderClasses() {
@@ -301,7 +300,7 @@
 
     function publishExam() {
       const title = document.getElementById("examTitle").value || "Grade 9 Quick Assessment";
-      alert(`Successfully published "${title}" to all student portals!`);
+      alert(`Successfully published "${title}" to Engleziti!`);
     }
 
     function submitExam(e) {
@@ -319,11 +318,10 @@
         <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-medium">Auto-Graded</span>
       `;
       list.prepend(newSub);
-      alert("Exam submitted successfully! Your grade has been logged.");
+      alert("Exam submitted successfully! Your grade has been logged in Engleziti.");
       switchView('teacher');
     }
 
-    // Initialize
     renderClasses();
   </script>
 </body>
